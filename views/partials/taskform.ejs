@@ -1,0 +1,14 @@
+<div class="item">
+    <h2 class="m_title"><%= name %></h2>
+    <div class="m_info">
+        <p class="m_task_status">Status: <%= task_status %></p>
+        <div class="m_undertitle">
+            <p class="m_date">Date: <%= date %></p>
+        </div>
+    </div>
+    <p class="m_description"><%= info %></p>
+    <div class="m_settings">
+        <a class="button" href="/edit-task/<%= index %>">Edit Task</a>
+        <a class="button" href="/delete-task/<%= index %>">Delete Task</a>
+    </div>
+</div>

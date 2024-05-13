@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {title: "Task Edit"}) %>
+<body>
+    <div class="wrapper">
+        <%- include("partials/header") %>
+        <main>
+            <div class="item task_form">
+                <form class="main__form" action="/edit-task/<%= index %>" method="POST">
+                    <div class="main__left">
+                        <label for="name">Enter the name of task</label>
+                        <input name="name" type="text" id="name" value="<%= task.name %>" required>
+                        <label for="info">Enter the description</label>
+                        <textarea name="info" id="info" required><%= task.info %></textarea>
+                        <label for="date">Enter the date by which you need the assignment done.</label>
+                        <input name="date" type="date" id="date" value="<%= task.date %>" required>
+                        <label for="task_status">Enter the status of task</label>
+                        <input name="task_status" type="text" value="<%= task.task_status %>" required>
+                        <button class="button" style="margin-top: 10px; width: 30%; background-color:#ffc107; color: black; ">Update task</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

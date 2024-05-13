@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {title: "Task Add"})%>
+<body>
+    <div class="wrapper">
+        <%- include("partials/header")%>
+        <main>
+            <div class="item task_form">
+                <form class="main__form" action="/add__task" method="POST">
+                    <div class="main__left">
+                        <label for="name">Enter the name of task</label>
+                        <input name="name" type="text" id="name" required>
+                        <label for="info">Enter the description</label>
+                        <textarea name="info" id="info" required></textarea>
+                        <label for="date">Enter the date by which you need the assignment done.</label>
+                        <input name="date" type="date" id="date" required>
+                        <label for="task_status">Enter the status of task</label>
+                        <input name="task_status" type="text" required>
+                        <button class="button" style="margin-top: 10px; width: 30%; background-color:#ffc107; color: black;">Add new task</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+</body>
+</html>
